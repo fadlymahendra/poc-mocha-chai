@@ -1,0 +1,20 @@
+{
+  "name": "poc-mocha-chai",
+  "version": "1.0.0",
+  "description": "POC API Testing Framework with Mocha and Chai",
+  "main": "index.js",
+  "scripts": {
+    "test-api": "./node_modules/mocha/bin/mocha ./api/test --recursive --reporter mochawesome --reporter-options reportDir=reports/mochawesome/ --timeout 180000",
+    "test": "mocha 'test/*.js'",
+    "reports": "open 'reports/mochawesome/mochawesome.html'"
+  },
+  "author": "Fadly Mahendra",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "chai": "^4.1.2",
+    "supertest": "^3.1.0",
+    "chai-json-schema": "^1.5.1",
+    "mochawesome": "^3.0.2",
+    "dotenv": "^7.0.0"
+  }
+}

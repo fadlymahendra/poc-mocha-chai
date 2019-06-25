@@ -1,0 +1,55 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "required": ["Search", "totalResults", "Response"],
+  "properties": {
+    "Search": {
+      "$id": "#/properties/Search",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/Search/items",
+        "type": "object",
+        "required": ["Title", "Year", "imdbID", "Type", "Poster"],
+        "properties": {
+          "Title": {
+            "$id": "#/properties/Search/items/properties/Title",
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "Year": {
+            "$id": "#/properties/Search/items/properties/Year",
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "imdbID": {
+            "$id": "#/properties/Search/items/properties/imdbID",
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "Type": {
+            "$id": "#/properties/Search/items/properties/Type",
+            "type": "string",
+            "pattern": "^(.*)$"
+          },
+          "Poster": {
+            "$id": "#/properties/Search/items/properties/Poster",
+            "type": "string",
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "totalResults": {
+      "$id": "#/properties/totalResults",
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
+    "Response": {
+      "$id": "#/properties/Response",
+      "type": "string",
+      "pattern": "^(.*)$"
+    }
+  }
+}
